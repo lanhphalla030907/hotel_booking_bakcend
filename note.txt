@@ -1,0 +1,12 @@
+export PATH="/d/tools/php84:$PATH"
+docker exec -it clothing-postgres psql -U postgres -c "CREATE DATABASE stayhub;"
+POSTGRES_PASSWORD=postgres
+
+
+បន្ទាប់មក យើងអាចពិនិត្យតារាងក្នុង PostgreSQL ដោយប្រើ៖
+docker exec -it clothing-postgres psql -U postgres -d stayhub
+នៅក្នុង PostgreSQL សូមវាយ៖
+\dt
+វានឹងបង្ហាញតារាងដែលមាននៅក្នុង Database stayhub។
+ចេញពី PostgreSQL ដោយវាយ៖
+\q
